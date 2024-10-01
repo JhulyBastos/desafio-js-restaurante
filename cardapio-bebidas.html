@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - Bebidas e Porções</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="PDfood Logo">
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cardapio-bebidas.html">Cardápio</a>
+        </nav>
+    </header>
+
+    <section id="menu">
+        <h1>Bebidas e Porções</h1>
+        <div class="card">
+            <img src="bebida1.jpg" alt="Bebida 1">
+            <h3>Suco Natural</h3>
+            <p>R$ 10,00</p>
+            <button onclick="addToCart('Suco Natural', 10)">Escolher Produto</button>
+        </div>
+        <div class="card">
+            <img src="porcao1.jpg" alt="Porção 1">
+            <h3>Porção de Batata</h3>
+            <p>R$ 15,00</p>
+            <button onclick="addToCart('Porção de Batata', 15)">Escolher Produto</button>
+        </div>
+    </section>
+
+    <aside>
+        <h2>Carrinho</h2>
+        <ul id="cart"></ul>
+        <p id="total">Total: R$ 0,00</p>
+        <button onclick="finalizeOrder()">Finalizar Compra</button>
+    </aside>
+
+    <footer>
+        <img src="logo.png" alt="PDfood Logo">
+    </footer>
+
+    <script src="script.js"></script>
+</body

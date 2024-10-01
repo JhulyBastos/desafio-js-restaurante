@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 95px;
+}
+
+.logo-header {
+  width: 153px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+li {
+  text-align: center;
+}
+
+.about-site {
+  width: 100%;
+  height: auto;
+  background-color: #f8f5f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.presentation > h1 {
+  font-size: 36px;
+}
+
+.presentation > p {
+  font-size: 18px;
+}
+
+.presentation-logo > img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.about-us {
+  width: 100%;
+  height: auto;
+  background-image: url("image/bg/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 20px;
+}
+.about-us > div {
+  width: 70%;
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-us > h1 {
+  font-size: 36px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.about-us > div > h2 {
+  font-size: 24px;
+  color: white;
+}
+
+.about-us > div > h3 {
+  font-size: 36px;
+  color: white;
+}
+
+.about-us > div > .about {
+  font-size: 18px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .about-site {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 100px;
+  }
+
+  .presentation > h1 {
+    font-size: 48px;
+  }
+
+  .presentation > p {
+    font-size: 24px;
+  }
+
+  .presentation-logo > img {
+    max-width: 500px;
+  }
+
+  .about-us-h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 170px;
+    margin-bottom: 36px;
+  }
+
+  .about-us > div > h2 {
+    font-size: 24px;
+  }
+
+  .about-us > div > h3 {
+    font-size: 48px;
+  }
+
+  .about-us > div > .about {
+    font-size: 24px;
+  }
+}
+
+.menu {
+  margin-top: 176px;
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
+.menu > h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+.menu-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+.menu-cards > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu > div > .card-1 {
+  background-color: #f8f5f2;
+  width: 510px;
+  height: 530px;
+  border-radius: 16px;
+}
+.menu > div > .card-1 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+.menu > div > .card-1 > div > img {
+  width: 345px;
+  height: 345px;
+}
+.menu > div > .card-1 > div > a > button {
+  background-color: #ff0000;
+  border: none;
+  padding: 10px 22px 10px;
+  font: "";
+  font-size: 32px;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 60px;
+}
+
+.menu > div > .card-2 {
+  background-color: #f8f5f2;
+  width: 510px;
+  height: 530px;
+  border-radius: 16px;
+}
+.menu > div > .card-2 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+.menu > div > .card-2 > div > img {
+  width: 345px;
+  height: 345px;
+}
+
+.menu > div > .card-2 > div > a > button {
+  background-color: #ff0000;
+  border: none;
+  padding: 10px 22px 10px;
+  font: "";
+  font-size: 32px;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 60px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-top: 120px;
+}
+
+footer .logo {
+  width: 200px;
+  height: auto;
+}
+
+footer .icons-footer {
+  display: flex;
+  gap: 20px;
+}
+
+footer .icons-footer img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
