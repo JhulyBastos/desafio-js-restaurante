@@ -1,0 +1,24 @@
+{
+  "produtos": [
+    {
+      "nome": "Iscas de frango",
+      "preco": "R$ 28,00"
+    },
+    {
+      "nome": "Iscas de tilápia",
+      "preco": "R$ 32,00"
+    },
+    {
+      "nome": "Filé com fritas",
+      "preco": "R$ 42,00"
+    },
+    {
+      "nome": "Batata frita",
+      "preco": "R$ 20,00"
+    },
+    {
+      "nome": "Fritas com bacon",
+      "preco": "R$ 25,00"
+    }
+  ]
+}

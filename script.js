@@ -1,4 +1,4 @@
-let cart = [];
+/*let cart = [];
 
 // Adiciona um item ao carrinho
 function addToCart(item, price) {
@@ -46,3 +46,35 @@ function finalizeOrder() {
 function confirmOrder() {
   window.location.href = "confirmacao.html";
 }
+*/
+
+fetch("/bebidas.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then((produtos) => {
+    const container = document.getElementById("product-cards");
+
+    produtos.bebidas.forEach((produto) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      card.innerHTML = `
+        <img  src="${produto.imagem}" alt="${produto.nome}">
+        <div class="info">
+          <h3>${produto.nome}</h3>
+          <p>${produto.preco}</p>
+        </div>
+        <button>
+          <img src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart.png" alt="Carrinho">
+          Comprar
+        </button>
+      `;
+
+      container.appendChild(card);
+    });
+  })
+  .catch((error) => console.error("Erro ao carregar o JSON:", error));

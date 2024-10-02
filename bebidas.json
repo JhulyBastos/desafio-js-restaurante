@@ -1,0 +1,29 @@
+{
+  "bebidas": [
+    {
+      "nome": "H2O",
+      "preco": "R$ 9,00",
+      "imagem": "image/bebidas/h2O.png"
+    },
+    {
+      "nome": "Água",
+      "preco": "R$ 4,00",
+      "imagem": "image/bebidas/agua.png"
+    },
+    {
+      "nome": "Pepsi",
+      "preco": "R$ 8,00",
+      "imagem": "image/bebidas/pepsi.png"
+    },
+    {
+      "nome": "Coca-cola",
+      "preco": "R$ 8,00",
+      "imagem": "image/bebidas/coca-cola.png"
+    },
+    {
+      "nome": "Limonada",
+      "preco": "R$ 12,00",
+      "imagem": "image/bebidas/limonada.png"
+    }
+  ]
+}

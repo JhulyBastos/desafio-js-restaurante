@@ -42,7 +42,7 @@ li {
   text-align: center;
 }
 
-.about-site {
+header .about-site {
   width: 100%;
   height: auto;
   background-color: #f8f5f2;
@@ -51,11 +51,15 @@ li {
   align-items: center;
   padding: 50px 20px;
 }
+/* Header acaba aqui  */
+.about-site {
+  display: flex;
+  align-items: center;
+}
 
 .presentation {
   display: flex;
   flex-direction: column;
-
   gap: 18px;
 }
 
@@ -76,7 +80,7 @@ li {
 .about-us {
   width: 100%;
   height: auto;
-  background-image: url("image/bg/bg.png");
+  background-image: url("/image/bg/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
