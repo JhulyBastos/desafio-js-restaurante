@@ -2,35 +2,43 @@
   "produtos": [
     {
       "nome": "Feijoada",
-      "preco": "R$ 25,00"
+      "preco": "R$ 25,00",
+      "imagem": "../image/pratos/feijoada.png"
     },
     {
       "nome": "Tropeiro",
-      "preco": "R$ 22,00"
+      "preco": "R$ 22,00",
+      "imagem": "../image/pratos/tropeiro.png"
     },
     {
       "nome": "Macarronada",
-      "preco": "R$ 18,00"
+      "preco": "R$ 18,00",
+      "imagem": "../image/pratos/macarronada.png"
     },
     {
       "nome": "Espaguete",
-      "preco": "R$ 20,00"
+      "preco": "R$ 20,00",
+      "imagem": "../image/pratos/espaguete.png"
     },
     {
       "nome": "Moqueca de peixe",
-      "preco": "R$ 34,00"
+      "preco": "R$ 34,00",
+      "imagem": "../image/pratos/moqueca-de-peixe.png"
     },
     {
       "nome": "Risoto de camarão",
-      "preco": "R$ 42,00"
+      "preco": "R$ 42,00",
+      "imagem": "../image/pratos/risoto-camarao.png"
     },
     {
       "nome": "Galinhada",
-      "preco": "R$ 28,00"
+      "preco": "R$ 28,00",
+      "imagem": "../image/pratos/risoto-de-frango.png"
     },
     {
       "nome": "Carne de panela",
-      "preco": "R$ 32,00"
+      "preco": "R$ 32,00",
+      "imagem": "../image/pratos/carne-cozida.png"
     }
   ]
 }

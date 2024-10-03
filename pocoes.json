@@ -2,23 +2,28 @@
   "produtos": [
     {
       "nome": "Iscas de frango",
-      "preco": "R$ 28,00"
+      "preco": "R$ 28,00",
+      "imagem": "image/porcoes/iscas-de-frango.png"
     },
     {
       "nome": "Iscas de tilápia",
-      "preco": "R$ 32,00"
+      "preco": "R$ 32,00",
+      "imagem": "image/porcoes/iscas-de-tilapia.png"
     },
     {
       "nome": "Filé com fritas",
-      "preco": "R$ 42,00"
+      "preco": "R$ 42,00",
+      "imagem": "image/porcoes/file-com-fritas.png"
     },
     {
       "nome": "Batata frita",
-      "preco": "R$ 20,00"
+      "preco": "R$ 20,00",
+      "imagem": "image/porcoes/batata-frita.png"
     },
     {
       "nome": "Fritas com bacon",
-      "preco": "R$ 25,00"
+      "preco": "R$ 25,00",
+      "imagem": "image/porcoes/fritas-com-bacon.png"
     }
   ]
 }

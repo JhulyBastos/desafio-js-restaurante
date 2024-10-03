@@ -55,6 +55,7 @@ header .about-site {
 .about-site {
   display: flex;
   align-items: center;
+  background-color: #f8f5f2;
 }
 
 .presentation {
