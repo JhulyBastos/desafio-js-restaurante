@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDFood - Cardápio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <img
+            class="logo-header"
+            src="../image/icons/logo.png"
+            alt="Logo PDFood"
+          />
+        </div>
+        <ul>
+          <li>Início</li>
+          <li>Sobre nós</li>
+          <li>Cardápio</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="products-container">
+          <h2 id="category-title"></h2>
+          <div id="products-grid" class="product-grid"></div>
+        </div>
+
+        <div class="cart-container">
+          <h2>Seu carrinho</h2>
+          <ul id="cart-items"></ul>
+          <div id="cart-total"></div>
+          <button id="finalizar-pedido">Finalizar pedido</button>
+        </div>
+      </div>
+
+      <div class="toggle-container">
+        <button id="toggle-category">
+          <img
+            src="../image/icons/prato-e-sobremesa.png"
+            alt="Alternar categoria"
+            id="toggle-icon"
+          />
+        </button>
+        <img
+          src="../image/icons/seta.png"
+          alt="Alternar categoria"
+          width="50px"
+          height="50px"
+        />
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <img class="logo" src="../image/icons/logo.png" alt="Logo PDFood" />
+      </div>
+      <div class="icons-footer">
+        <img src="../image/icons/wpp.png" alt="WhatsApp" />
+        <img src="../image/icons/instagram.png" alt="Instagram" />
+        <img src="../image/icons/facebook.png" alt="Facebook" />
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
