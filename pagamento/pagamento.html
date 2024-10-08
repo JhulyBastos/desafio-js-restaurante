@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDFood - Pagamento</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <img class="logo-header" src="../image/icons/logo.png" alt="Logo PDFood" />
+        </div>
+        <ul>
+          <li>Início</li>
+          <li>Sobre nós</li>
+          <li>Cardápio</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="payment-section">
+          <a href="../cardapio/cardapio.html" class="back-arrow">&#8592;</a>
+          <h1>Pagamento</h1>
+          <div class="payment-options">
+            <button class="payment-option" data-method="dinheiro">
+              <img src="../image/icons/dinheiro.png" alt="Dinheiro" />
+              <span>Dinheiro</span>
+            </button>
+            <button class="payment-option" data-method="pix">
+              <img src="../image/icons/pix.png" alt="PIX" />
+              <span>PIX</span>
+            </button>
+          </div>
+          <div class="address-form">
+            <h2>Endereço para envio</h2>
+            <form id="address-form">
+              <input type="text" id="cep" placeholder="CEP" required />
+              <div class="street-number">
+                <input type="text" id="rua" placeholder="Rua" required />
+                <input type="text" id="numero" placeholder="Número" required />
+              </div>
+              <input type="text" id="bairro" placeholder="Bairro" required />
+            </form>
+          </div>
+          <div class="payment-buttons">
+            <button id="cancelar-pedido">Cancelar</button>
+            <button id="finalizar-compra">Finalizar compra</button>
+          </div>
+        </div>
+        <div class="cart-container">
+          <h2>Seu carrinho</h2>
+          <ul id="cart-items"></ul>
+          <div id="cart-total"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <img class="logo" src="../image/icons/logo.png" alt="Logo PDFood" />
+      </div>
+      <div class="icons-footer">
+        <img src="../image/icons/wpp.png" alt="WhatsApp" />
+        <img src="../image/icons/instagram.png" alt="Instagram" />
+        <img src="../image/icons/facebook.png" alt="Facebook" />
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Recuperar o carrinho do localStorage
+        let cartData = localStorage.getItem("savedCart");
+        if (cartData) {
+          cart = JSON.parse(cartData);
+          updateCart();
+        } else {
+          cart = [];
+        }
+
+        // Event listeners para os botões de pagamento
+        document.getElementById("cancelar-pedido").addEventListener("click", () => {
+          // Limpar o carrinho e redirecionar de volta ao cardápio
+          localStorage.removeItem("savedCart");
+          window.location.href = "../cardapio/cardapio.html";
+        });
+
+        document.getElementById("finalizar-compra").addEventListener("click", () => {
+          if (cart.length === 0) {
+            alert("Seu carrinho está vazio!");
+          } else {
+            alert("Compra finalizada! Total: R$ " + document.getElementById("cart-total").textContent.split("R$")[1]);
+            // Limpar o carrinho
+            cart = [];
+            localStorage.removeItem("savedCart");
+            updateCart();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

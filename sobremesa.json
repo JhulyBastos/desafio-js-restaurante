@@ -2,19 +2,23 @@
   "produtos": [
     {
       "nome": "Bolo de chocolate",
-      "preco": "R$ 15,00"
+      "preco": "R$ 15,00",
+      "imagem": "../image/sobremesas/bolo-de-chocolate.png"
     },
     {
       "nome": "Torta de morango",
-      "preco": "R$ 12,00"
+      "preco": "R$ 12,00",
+      "imagem": "../image/sobremesas/torta-de-morango.png"
     },
     {
       "nome": "Sorvete",
-      "preco": "R$ 10,00"
+      "preco": "R$ 10,00",
+      "imagem": "../image/sobremesas/sorvete.png"
     },
     {
       "nome": "Gelatina",
-      "preco": "R$ 8,00"
+      "preco": "R$ 8,00",
+      "imagem": "../image/sobremesas/gelatina.png"
     }
   ]
 }
