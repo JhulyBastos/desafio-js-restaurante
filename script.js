@@ -4,7 +4,9 @@ function getUrlParameter(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
   var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
   var results = regex.exec(location.search);
-  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  return results === null
+    ? ""
+    : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
 function addToCart(name, price) {
@@ -28,8 +30,12 @@ function updateCart() {
   cart.forEach((item) => {
     const li = document.createElement("li");
     li.innerHTML = `
-      <span><span class="item-quantity">${item.quantity}</span>${item.name}</span>
-      <span class="item-price">R$ ${(item.price * item.quantity).toFixed(2)}</span>
+      <span><span class="item-quantity">${item.quantity}</span>${
+      item.name
+    }</span>
+      <span class="item-price">R$ ${(item.price * item.quantity).toFixed(
+        2
+      )}</span>
     `;
     cartItems.appendChild(li);
     total += item.price * item.quantity;
@@ -65,7 +71,9 @@ function createProductCard(product, container) {
 
 function handleAddToCart(name, price) {
   // Certifique-se de que o preço seja um número
-  const numericPrice = parseFloat(price.toString().replace("R$", "").replace(",", "."));
+  const numericPrice = parseFloat(
+    price.toString().replace("R$", "").replace(",", ".")
+  );
   addToCart(name, numericPrice);
   updateProductCardQuantity(name);
 }
@@ -110,7 +118,9 @@ function updateProductCardQuantity(name) {
         // Obter o preço do elemento .price
         const priceElement = card.querySelector(".price");
         let price = priceElement ? priceElement.textContent : "0";
-        let numericPrice = parseFloat(price.replace("R$", "").replace(",", "."));
+        let numericPrice = parseFloat(
+          price.replace("R$", "").replace(",", ".")
+        );
 
         cartControls.innerHTML = `
           <button class="cart-button" onclick="handleAddToCart('${name}', ${numericPrice})">
@@ -135,7 +145,9 @@ function removeAllFromCart(name) {
       // Obter o preço do elemento .price
       const priceElement = card.querySelector(".price");
       let priceText = priceElement ? priceElement.textContent : "0";
-      let numericPrice = parseFloat(priceText.replace("R$", "").replace(",", "."));
+      let numericPrice = parseFloat(
+        priceText.replace("R$", "").replace(",", ".")
+      );
 
       cartControls.innerHTML = `
         <button class="cart-button" onclick="handleAddToCart('${name}', ${numericPrice})">
@@ -152,7 +164,9 @@ fetch("../bebidas.json")
   .then((response) => response.json())
   .then((data) => {
     const bebidasContainer = document.getElementById("bebidas-cards");
-    data.bebidas.forEach((bebida) => createProductCard(bebida, bebidasContainer));
+    data.bebidas.forEach((bebida) =>
+      createProductCard(bebida, bebidasContainer)
+    );
   })
   .catch((error) => console.error("Erro ao carregar bebidas:", error));
 
@@ -161,7 +175,9 @@ fetch("../pocoes.json")
   .then((response) => response.json())
   .then((data) => {
     const porcoesContainer = document.getElementById("porcoes-cards");
-    data.produtos.forEach((porcao) => createProductCard(porcao, porcoesContainer));
+    data.produtos.forEach((porcao) =>
+      createProductCard(porcao, porcoesContainer)
+    );
   })
   .catch((error) => console.error("Erro ao carregar porções:", error));
 
@@ -268,7 +284,9 @@ function loadPratosESobremesas() {
       sobremesasSection.innerHTML = "<h2>Sobremesas</h2>";
       const sobremesasGrid = document.createElement("div");
       sobremesasGrid.className = "product-grid";
-      data.produtos.forEach((sobremesa) => createProductCard(sobremesa, sobremesasGrid));
+      data.produtos.forEach((sobremesa) =>
+        createProductCard(sobremesa, sobremesasGrid)
+      );
       sobremesasSection.appendChild(sobremesasGrid);
       pratosSobremesasContainer.appendChild(sobremesasSection);
     })
@@ -314,7 +332,9 @@ function loadPaymentPage() {
   const cartTotal = document.getElementById("cart-total");
 
   if (!cartItems || !cartTotal) {
-    console.error("Elementos do carrinho não encontrados na página de pagamento");
+    console.error(
+      "Elementos do carrinho não encontrados na página de pagamento"
+    );
     return;
   }
 
@@ -340,19 +360,10 @@ function loadPaymentPage() {
 
   // Adicionar event listeners para os botões da página de pagamento
   const cancelarPedido = document.getElementById("cancelar-pedido");
-  const finalizarCompra = document.getElementById("finalizar-compra");
 
   if (cancelarPedido) {
     cancelarPedido.addEventListener("click", () => {
       window.location.href = "../cardapio/cardapio.html";
-    });
-  }
-
-  if (finalizarCompra) {
-    finalizarCompra.addEventListener("click", () => {
-      alert("Compra finalizada! Obrigado por seu pedido.");
-      localStorage.removeItem("savedCart");
-      window.location.href = "../home/index.html";
     });
   }
 }

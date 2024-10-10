@@ -52,7 +52,9 @@
           </div>
           <div class="payment-buttons">
             <button id="cancelar-pedido">Cancelar</button>
-            <button onclick="" id="finalizar-compra">Finalizar compra</button>
+            <a href="../confirmacao/confirmacao.html">
+              <button id="finalizar-compra">Finalizar compra</button>
+            </a>
           </div>
         </div>
         <div class="cart-container">
@@ -95,6 +97,7 @@
             window.location.href = "../cardapio/cardapio.html";
           });
 
+        /*
         document
           .getElementById("finalizar-compra")
           .addEventListener("click", () => {
@@ -113,6 +116,8 @@
               updateCart();
             }
           });
+
+          */
       });
     </script>
   </body>
