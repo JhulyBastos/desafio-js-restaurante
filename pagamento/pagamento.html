@@ -10,7 +10,11 @@
     <header>
       <nav>
         <div>
-          <img class="logo-header" src="../image/icons/logo.png" alt="Logo PDFood" />
+          <img
+            class="logo-header"
+            src="../image/icons/logo.png"
+            alt="Logo PDFood"
+          />
         </div>
         <ul>
           <li>Início</li>
@@ -48,7 +52,7 @@
           </div>
           <div class="payment-buttons">
             <button id="cancelar-pedido">Cancelar</button>
-            <button id="finalizar-compra">Finalizar compra</button>
+            <button onclick="" id="finalizar-compra">Finalizar compra</button>
           </div>
         </div>
         <div class="cart-container">
@@ -83,23 +87,32 @@
         }
 
         // Event listeners para os botões de pagamento
-        document.getElementById("cancelar-pedido").addEventListener("click", () => {
-          // Limpar o carrinho e redirecionar de volta ao cardápio
-          localStorage.removeItem("savedCart");
-          window.location.href = "../cardapio/cardapio.html";
-        });
-
-        document.getElementById("finalizar-compra").addEventListener("click", () => {
-          if (cart.length === 0) {
-            alert("Seu carrinho está vazio!");
-          } else {
-            alert("Compra finalizada! Total: R$ " + document.getElementById("cart-total").textContent.split("R$")[1]);
-            // Limpar o carrinho
-            cart = [];
+        document
+          .getElementById("cancelar-pedido")
+          .addEventListener("click", () => {
+            // Limpar o carrinho e redirecionar de volta ao cardápio
             localStorage.removeItem("savedCart");
-            updateCart();
-          }
-        });
+            window.location.href = "../cardapio/cardapio.html";
+          });
+
+        document
+          .getElementById("finalizar-compra")
+          .addEventListener("click", () => {
+            if (cart.length === 0) {
+              alert("Seu carrinho está vazio!");
+            } else {
+              alert(
+                "Compra finalizada! Total: R$ " +
+                  document
+                    .getElementById("cart-total")
+                    .textContent.split("R$")[1]
+              );
+              // Limpar o carrinho
+              cart = [];
+              localStorage.removeItem("savedCart");
+              updateCart();
+            }
+          });
       });
     </script>
   </body>
